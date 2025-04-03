@@ -35,4 +35,12 @@ public class MainClassTest
         int actual = mainClass.getClassNumber();
         assertTrue("Class number returned by getClassNumber is not greater than 45, but got: " + actual, actual > 45);
     }
+
+    @Test
+    public void testGetClassString() {
+        String actualString = mainClass.getClassString();
+        boolean containsHello = actualString.contains("hello") || actualString.contains("Hello");
+        assertTrue("Expected the string to contain 'hello' or 'Hello', but got: " + actualString, containsHello);
+
+    }
 }
