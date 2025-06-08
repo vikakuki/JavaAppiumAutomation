@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad5b6cbb-a4cc-4179-b03d-75420f59938a" name="Changes" comment="ADD: first app test">
+    <list default="true" id="ad5b6cbb-a4cc-4179-b03d-75420f59938a" name="Changes" comment="ADD: cancel search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/FirstTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FirstTest.class" afterDir="false" />
     </list>
@@ -38,61 +37,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.FirstTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.firstTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.testSearchCancel.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.testSearchFieldText.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AppiumWikipediaTest [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AppiumWikipediaTest [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AppiumWikipediaTest [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vikto/tsi/JavaAppiumAutomation/JavaAppiumAutomation/libs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/home/vikto/tsi/JavaAppiumAutomation/JavaAppiumAutomation/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.FirstTest.executor": "Run",
+    "JUnit.FirstTest.firstTest.executor": "Run",
+    "JUnit.FirstTest.testSearchCancel.executor": "Run",
+    "JUnit.FirstTest.testSearchFieldText.executor": "Run",
+    "JUnit.FirstTest.testSearchResultsContainQuery.executor": "Run",
+    "JUnit.FirstTest.testSearchResultsContainWord.executor": "Run",
+    "Maven.AppiumWikipediaTest [clean].executor": "Run",
+    "Maven.AppiumWikipediaTest [install].executor": "Run",
+    "Maven.AppiumWikipediaTest [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/vikto/tsi/JavaAppiumAutomation/JavaAppiumAutomation/libs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/vikto/tsi/JavaAppiumAutomation/JavaAppiumAutomation/src/Main.java",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/apks" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.testSearchFieldText">
+  <component name="RunManager" selected="JUnit.FirstTest.testSearchResultsContainQuery">
     <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaAppiumAutomation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstTest.firstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaAppiumAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="firstTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,12 +108,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FirstTest.testSearchResultsContainQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAppiumAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testSearchResultsContainQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstTest.testSearchResultsContainWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaAppiumAutomation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="testSearchResultsContainWord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.testSearchResultsContainQuery" />
+        <item itemvalue="JUnit.FirstTest.testSearchResultsContainWord" />
         <item itemvalue="JUnit.FirstTest.testSearchFieldText" />
         <item itemvalue="JUnit.FirstTest" />
         <item itemvalue="JUnit.FirstTest.testSearchCancel" />
-        <item itemvalue="JUnit.FirstTest.firstTest" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +156,7 @@
       <workItem from="1746385765779" duration="7997000" />
       <workItem from="1746479570891" duration="608000" />
       <workItem from="1746705844079" duration="79000" />
-      <workItem from="1749413064954" duration="1812000" />
+      <workItem from="1749413064954" duration="2987000" />
     </task>
     <task id="LOCAL-00001" summary="ADD: first app test">
       <option name="closed" value="true" />
@@ -154,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746389360871</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ADD: first test - find a word">
+      <option name="closed" value="true" />
+      <created>1749415212253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749415212253</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ADD: cancel search">
+      <option name="closed" value="true" />
+      <created>1749416005521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749416005521</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +205,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ADD: first app test" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: first app test" />
+    <MESSAGE value="ADD: first test - find a word" />
+    <MESSAGE value="ADD: cancel search" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: cancel search" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

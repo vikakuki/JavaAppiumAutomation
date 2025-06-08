@@ -75,7 +75,6 @@ public class FirstTest {
         skip.click();
     }
 
-
     @Test
     public void testSearchResultsContainWord() {
         skipOnboarding();
@@ -100,4 +99,34 @@ public class FirstTest {
         List<WebElement> clearedResults = driver.findElements(By.id(SEARCH_RESULT_TITLE_ID));
         assertEquals("Search results should be cleared after cancel", 0, clearedResults.size());
     }
+
+    @Test
+    public void testSearchResultsContainQuery() {
+        String query = "Java";
+        skipOnboarding();
+
+        WebElement searchField = wait.until(
+                ExpectedConditions.elementToBeClickable(By.id(SEARCH_CONTAINER_ID))
+        );
+        searchField.click();
+
+        WebElement input = wait.until(
+                ExpectedConditions.presenceOfElementLocated(By.id(SEARCH_INPUT_ID))
+        );
+        input.sendKeys("Java");
+
+        List<WebElement> results = wait.until(
+                ExpectedConditions.presenceOfAllElementsLocatedBy(
+                        By.id(SEARCH_RESULT_TITLE_ID)
+                )
+        );
+        assertFalse("No search results found", results.isEmpty());
+
+        for (WebElement result : results) {
+            String text = result.getText().toLowerCase();
+            assertTrue("Search result does not contain the word '" + query + "': " + text,
+                    text.contains(query.toLowerCase()));
+        }
+    }
 }
+
