@@ -21,6 +21,13 @@ public class FirstTest {
     private AppiumDriver driver;
     private WebDriverWait wait;
 
+    private final String SKIP_BUTTON_ID = "org.wikipedia:id/fragment_onboarding_skip_button";
+    private final String SEARCH_CONTAINER_ID = "org.wikipedia:id/search_container";
+    private final String SEARCH_INPUT_ID = "org.wikipedia:id/search_src_text";
+    private final String SEARCH_RESULT_TITLE_ID = "org.wikipedia:id/page_list_item_title";
+    private final String SEARCH_CLOSE_BTN_ID = "org.wikipedia:id/search_close_btn";
+
+
 
     @Before
     public void setUp() throws Exception {
@@ -47,24 +54,50 @@ public class FirstTest {
     }
 
     @Test
-    public void firstTest() {
+    public void testAppLaunchesSuccessfully() {
         System.out.println("App launched successfully!");
     }
 
     @Test
     public void testSearchFieldText() {
-        WebElement skipButton = wait.until(
-                ExpectedConditions.elementToBeClickable(By.id("org.wikipedia:id/fragment_onboarding_skip_button"))
-        );
-        skipButton.click();
+        skipOnboarding();
 
-        WebElement searchFieldContainer = wait.until(
-                ExpectedConditions.presenceOfElementLocated(By.id("org.wikipedia:id/search_container"))
+        WebElement searchContainer = wait.until(
+                ExpectedConditions.presenceOfElementLocated(By.id(SEARCH_CONTAINER_ID))
         );
 
-        WebElement searchText = searchFieldContainer.findElement(By.className("android.widget.TextView"));
-        String actualText = searchText.getText();
+        WebElement searchText = searchContainer.findElement(By.className("android.widget.TextView"));
+        assertEquals("Search Wikipedia", searchText.getText());
+    }
 
-        assertEquals("Search Wikipedia", actualText);
+    private void skipOnboarding() {
+        WebElement skip = wait.until(ExpectedConditions.elementToBeClickable(By.id(SKIP_BUTTON_ID)));
+        skip.click();
+    }
+
+
+    @Test
+    public void testSearchResultsContainWord() {
+        skipOnboarding();
+
+        WebElement searchField = wait.until(
+                ExpectedConditions.elementToBeClickable(By.id(SEARCH_CONTAINER_ID))
+        );
+        searchField.click();
+
+        WebElement input = wait.until(
+                ExpectedConditions.presenceOfElementLocated(By.id(SEARCH_INPUT_ID))
+        );
+        input.sendKeys("Java");
+
+        List<WebElement> results = wait.until(
+                ExpectedConditions.presenceOfAllElementsLocatedBy(By.id(SEARCH_RESULT_TITLE_ID))
+        );
+        assertFalse("No search results found", results.isEmpty());
+
+        driver.findElement(By.id(SEARCH_CLOSE_BTN_ID)).click();
+
+        List<WebElement> clearedResults = driver.findElements(By.id(SEARCH_RESULT_TITLE_ID));
+        assertEquals("Search results should be cleared after cancel", 0, clearedResults.size());
     }
 }
